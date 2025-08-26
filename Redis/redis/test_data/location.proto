@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package perception.msg;
+
+message Location{
+    double timestamp = 1;               // 时间戳，单位: ns
+    double lon = 2;                     // 经度，单位: °
+    double lat = 3;                     // 纬度，单位: °
+    double height = 4;                  // 高程，单位: m
+    double pitch = 5;                   // 俯仰角，单位: rad
+    double roll = 6;                    // 翻滚角，单位: rad
+    double heading = 7;                 // 航向角，单位: rad
+    double linear_velocity = 8;         // 线速度矢量，单位: m/s
+    double velocity_x = 9;              // 线速度东方向分量，单位: m/s
+    double velocity_y = 10;             // 线速度北方向分量，单位: m/s
+    double velocity_z = 11;             // 线速度垂直方向分量，单位: m/s
+    double linear_acceleration = 12;    // 线加速度矢量，单位: m/s²
+    double acceleration_x = 13;         // 线加速度分量_x，单位: m/s²
+    double acceleration_y = 14;         // 线加速度分量_y，单位: m/s²
+    double acceleration_z = 15;         // 线加速度分量_z，单位: m/s²
+    double angular_velocity = 16;       // 角速度矢量，单位: °/s
+    double angular_velocity_x = 17;     // 角速度分量_x，单位: °/s
+    double angular_velocity_y = 18;     // 角速度分量_y，单位: °/s
+    double angular_velocity_z = 19;     // 角速度分量_z，单位: °/s
+    double origin_lon = 20;             // 参考点经度，单位: °
+    double origin_lat = 21;             // 参考点纬度，单位: °
+    double utm_position_x = 22;         // 相对参考点 x 坐标，单位: m
+    double utm_position_y = 23;         // 相对参考点 y 坐标，单位: m
+    double utm_position_z = 24;         // 相对参考点 z 坐标，单位: m
+    int32 rtkflag = 25;                 // 定位状态标志位，0：无rtk 1：定位状态良好 2：定位状态不稳定 3：定位状态错误
+}

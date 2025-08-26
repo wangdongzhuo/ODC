@@ -1,0 +1,14 @@
+PS E:\monitorODC> & E:/Anaconda3/envs/monitorODC/python.exe e:/monitorODC/main/simulate_real_time_data.py
+注：
+1)& E:/Anaconda3/envs/monitorODC/python.exe 这里是python解释器的地址
+2)E:\monitorODC 这里是文件夹绝对路径
+3)e:/monitorODC/main/simulate_real_time_data.py
+
+PS E:\monitorODC> & E:/Anaconda3/envs/monitorODC/python.exe .\call_vehicle.py
+注：调用车辆信息的接口
+
+启动get_odd_api.py说明:
+1.启动start_all_service.py
+2.启动call_monitor_service.py
+3.启动get_odd_api.py
+4.调用collect_and_save接口

@@ -1,0 +1,36 @@
+{
+  "sendDataType": "STMS_RSI",
+  "data": {
+    "attach": {},
+    "rsisNum": 1,
+    "vehicleId": "B25E000F",
+    "rsis": [
+      {
+        "referenceLinks": [],
+        "pathRadius": 1024,
+        "eventSource": 4,
+        "eventType": 6523,
+        "priority": 0,
+        "uuidLen": 38,
+        "uuid": "ET_0_B25E000F_6523_1689645235235_02909",
+        "content": "{\"valid\":1,\"numAdvSpd\":1,\"advSpd\":[{\"spdExp\":2.0,\"numIntersection\":1,\"spdMax\":8.25,\"spdMin\":7.75,\"maneuver\":1}],\"vehicleId\":\"B25E000F\",\"type\":1,\"d2StopLine\":948.7}",
+        "eventPosition": {
+          "elevation": 0,
+          "latitude": 29.5201237,
+          "longitude": 106.3213544
+        },
+        "alertPath": [],
+        "referenceLinksNum": 0,
+        "alertPathNum": 0,
+        "eventRadius": 65535,
+        "contentLen": 163,
+        "status": 0,
+        "timestamp": 1689645335627
+      }
+    ],
+    "eventVehicleId": "B25E000F",
+    "uuid": "ET_0_B25E000F_6523_1689645235235_02909",
+    "receiveVehicleId": "B25E000F",
+    "timestamp": 1689645335627
+  }
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package perception.msg;
+
+message Pt {
+    double x = 1;                   // X 坐标，单位: m
+    double y = 2;                   // Y 坐标，单位: m
+}
+
+message Line {
+    int32 lane_type = 1;            // 车道线类型，白虚线=0；白实线=1；双白虚线=2；双白实线=3；左虚右实白线=4；左实右虚白线=5；黄虚线=6；黄实线=7；双黄实线=8；左虚右实黄线=9；左实右虚黄线=10；左路沿线=11；右路沿线=12；
+    int32 pts_vehicle_num = 2;      // 车身坐标系点集数量
+    repeated Pt pts_vehicle = 3;    // 车辆坐标系车道线点集(前x左y上z)
+    int32 pts_abs_num = 4;          // 世界坐标系车道线点集数量
+    repeated Pt pts_abs = 5;        // 世界坐标系车道线点集(东北天坐标系)
+    double confidence = 6;          // 车道线置信度
+}
+
+message LaneList {
+    double timestamp = 1;           // 时间戳
+    int32 lane_num = 2;             // 车道线数量
+    repeated Line laneline = 3;     // 车道线数组
+}

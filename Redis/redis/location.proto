@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message Location{
+    double timestamp = 1;
+    double lon = 2;
+    double lat = 3;
+    double height = 4;
+    double pitch = 5;
+    double roll = 6;
+    double heading = 7;
+    double linear_velocity = 8;
+    double velocity_x = 9;
+    double velocity_y = 10;
+    double velocity_z = 11;
+    double linear_acceleration = 12;
+    double acceleration_x = 13;
+    double acceleration_y = 14;
+    double acceleration_z = 15;
+    double angular_velocity = 16;
+    double angular_velocity_x = 17;
+    double angular_velocity_y = 18;
+    double angular_velocity_z = 19;
+    double origin_lon = 20;
+    double origin_lat = 21;
+    double utm_position_x = 22;
+    double utm_position_y = 23;
+    double utm_position_z = 24;
+}

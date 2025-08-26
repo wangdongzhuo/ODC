@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package perception.msg;
+
+message Traffic_Light {
+    int32 color = 1;        // 交通灯颜色类型，UNKNOWN = 0; RED = 1; YELLOW = 2; GREEN = 3; BLACK = 4;
+    double confidence = 2;  // 交通灯检测置信度
+    int32 light_pt_x = 3;   // 交通灯矩阵框左上角点 x 坐标
+    int32 light_pt_y = 4;   // 交通灯矩阵框左上角点 y 坐标
+    int32 height = 5;       // 交通灯矩阵框高度
+    int32 width = 6;        // 交通灯矩阵框宽度
+    int32 intersectionId = 7;   // 路口编号
+    int32 phase_id = 8;         // 相位编号
+    double remaining_time = 9;  // 信号灯剩余时间，秒
+    double lon = 10;            // 经度
+    double lat = 11;            // 纬度
+}
+
+message TrafficLightlist {
+    double timestamp = 1;                       // 时间戳
+    int32 traffic_light_num = 2;                // 红绿灯数量
+    repeated Traffic_Light trafficlights = 3;   // 红绿灯数组
+}

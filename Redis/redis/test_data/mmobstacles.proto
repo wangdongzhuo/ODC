@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package perception.msg;
+
+message Obstacle {
+    int32 id = 1;                       // 障碍物 id
+    double center_pos_vehicle_x = 2;    // 车辆坐标系下中心点位置 x 坐标（前向），单位: m
+    double center_pos_vehicle_y = 3;    // 车辆坐标系下中心点位置 y 坐标（左向），单位: m
+    double center_pos_vehicle_z = 4;    // 车辆坐标系下中心点位置 z 坐标（朝上方向），单位: m
+    double center_pos_abs_x = 5;        // 世界坐标系下中心点位置 x 坐标（东方向，单位: m
+    double center_pos_abs_y = 6;        // 世界坐标系下中心点位置 y 坐标（北方向），单位: m
+    double center_pos_abs_z = 7;        // 世界坐标系下中心点位置 z 坐标（朝上方向)，单位: m
+    double velocity_vehicle = 8;        // 车辆坐标系下速度矢量（-π～π,正前:0, 逆时针。满足右手定则），单位: 米/秒
+    double velocity_abs = 9;            // 世界坐标系下速度矢量（-π～π,正东:0, 逆时针。满足右手定则），单位: 米/秒
+    double theta_vehicle = 10;          // 车辆坐标系下航向角，单位: 弧度
+    double theta_abs = 11;              // 世界坐标系下航向角，单位: 弧度
+    double length = 12;                 // 障碍物长度，单位: m
+    double width = 13;                  // 障碍物宽度，单位: m
+    double height = 14;                 // 障碍物高度，单位: m
+    int32 type = 15;                    // 障碍物类别，UNKNOWN = 0;UNKNOWN_MOVABLE = 1;UNKNOWN_UNMOVABLE = 2;CAR = 3;VAN = 4;TRUCK = 5;BUS = 6; CYCLIST = 7;MOTORCYCLIST = 8;TRICYCLIST = 9; PEDESTRIAN = 10; TRAFFICCONE = 11;
+    double confidence = 16;             // 障碍物类别置信度
+    int32 lane_position = 17;           // 车道线位置，左左车道=-2；左车道=-1；本车道=0；右车道=1；右右车道=2
+    int32 fusion_type = 18;             // 融合障碍物来源标识位
+    int32 cross_id = 19;                // 路口编号
+    int32 src_type = 20;                // 路段 id
+    int32 lane_id = 21;                 // 车道编号
+    string lane_index = 22;             // 车道序列号
+    double lon = 23;                    // 经度，单位: °
+    double lat = 24;                    // 纬度，单位: °
+}
+
+
+message MMobstacles{
+    double timestamp = 1;               // 时间戳，单位: ns
+    int32 obstacle_num = 2;             // 障碍物数量
+    repeated Obstacle obstacles = 3;    // 障碍物数组
+}

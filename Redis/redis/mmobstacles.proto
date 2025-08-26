@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+
+message Obstacle {
+    int32 id = 1;
+    double center_pos_vehicle_x = 2;
+    double center_pos_vehicle_y = 3;
+    double center_pos_vehicle_z = 4;
+    double center_pos_abs_x = 5;
+    double center_pos_abs_y = 6;
+    double center_pos_abs_z = 7;
+    double velocity_vehicle = 8;
+    double velocity_abs = 9;
+    double theta_vehicle = 10;
+    double theta_abs = 11;
+    double length = 12;
+    double width = 13;
+    double height = 14;
+    int32 type = 15;
+    double confidence = 16;
+    int32 lane_position = 17;
+    int32 fusion_type = 18;
+    int32 cross_id = 19;
+    int32 src_type = 20;
+    int32 lane_id = 21;
+    string lane_index = 22;
+}
+
+
+message MMobstacles{
+    double timestamp = 1;
+    int32 obstacle_num = 2;
+    repeated Obstacle obstacles = 3;
+}
+
