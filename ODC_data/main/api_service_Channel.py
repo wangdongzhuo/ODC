@@ -50,4 +50,4 @@ if __name__ == '__main__':
     timeout = 2  # 超时时间为2秒
     threading.Thread(target=monitor_task, args=(target_ip, interval, timeout), daemon=True).start()
     # 启动 Flask 应用
-    app.run(host='127.0.0.1', port=4999,debug=True)
+    app.run(host='0.0.0.0', port=4999,debug=True)

@@ -7,7 +7,7 @@ import socket
 def start_redis():
     try:
         # 启动 Redis 服务器
-        subprocess.Popen([r"Redis\ProgramFile\Redis\redis-server.exe"])  # 不使用指定的配置文件
+        subprocess.Popen([r"C:\Users\wdz\Desktop\ODCmonitor\ODCmonitor\monitorODC\Redis\ProgramFile\Redis\redis-server.exe"])  # 不使用指定的配置文件
         print("Redis 服务器已启动")
     except Exception as e:
         print("启动 Redis 服务器时出错:", e)
